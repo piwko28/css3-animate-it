@@ -31,10 +31,7 @@
 
 .fadeIn {
   .opacity;
-
-  &.go {
-    .animation( fadeIn );
-  }
+  .animation( fadeIn );
 }
 
 /*************
@@ -65,11 +62,8 @@
 
 .fadeInLeft {
   .opacity;
-  .translate( -400px );
-
-  &.go {
-    .animation( fadeInLeft );
-  }
+  .translateX( -400px );
+  .animation( fadeInLeft );
 }
 
 /*************
@@ -101,10 +95,7 @@
 .fadeInRight {
   .opacity;
   .translateX( 400px );
-
-  &.go {
-    .animation( fadeInRight );
-  }
+  .animation( fadeInRight );
 }
 
 /*************
@@ -136,20 +127,17 @@
 .fadeInUp {
   .opacity;
   .translateY( 400px );
-
-  &.go {
-    .animation( fadeInUp );
-  }
+  .animation( fadeInUp );
 }
 
 /*************
 * FadeInDown *
 *************/
 
-.fadeInDown-frames() {
+.fadeInDown-frames(@distance : 400px) {
   0% {
     .opacity;
-    .translateY( -400px );
+    .translateY( unit(-1 * @distance, px) );
   }
   50% {
     .opacity( .3 );
@@ -171,8 +159,5 @@
 .fadeInDown {
   .opacity;
   .translateY( -400px );
-
-  &.go {
-    .animation( fadeInDown );
-  }
+  .animation( fadeInDown );
 }

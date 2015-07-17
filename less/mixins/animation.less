@@ -1,11 +1,16 @@
 .animation( @name ) {
-  animation-name: @name;
 
-  -webkit-animation-name: @name;
+  animation-name: none !important;
+  -webkit-animation-name: none !important;
+
+  &.go {
+		animation-name: @name !important;
+  	-webkit-animation-name: @name !important;
+  }
+
 }
 
 .animation-timing( @timing ) {
   animation-timing-function: @timing;
-
   -webkit-animation-timing-function: @timing;
 }
