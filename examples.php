@@ -665,6 +665,7 @@
 </html>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src='js/css3-animate-it.js'></script>
+<script src='js/main.js'></script>
 
 <script>
 $(document).ready(function(){
