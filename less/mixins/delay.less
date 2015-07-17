@@ -1,0 +1,19 @@
+.delay(@duration) {
+	-webkit-animation-delay : @duration;
+  -moz-animation-delay : @duration;
+  -o-animation-delay : @duration;
+  animation-delay : @duration;
+}
+
+.generate-delays(@n, @gap, @i : 0) when (@i =< @n) {
+
+	@delay : unit(@i * @gap);
+  .delay-@{delay} {
+    .delay(@i * @gap);
+  }
+
+  .generate-delays(@n, @gap, (@i + 1));
+  
+}
+
+.generate-delays(20, 250ms);
